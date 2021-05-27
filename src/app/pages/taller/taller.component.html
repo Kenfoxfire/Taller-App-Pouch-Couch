@@ -1,0 +1,39 @@
+
+<nav class="navbar navbar-dark navbar-expand bg-dark shadow mb-4 topbar static-top ">
+</nav>
+<table class="table mt-3 animate__animated animate__fadeIn fast">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Dueño</th>
+      <th scope="col">Marca y Modelo</th>
+      <th scope="col">Placa</th>
+      <th scope="col">Editar y borrar</th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let dato of datosDBAutomovil;  let i = index">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{  dato.dueno }}</td>
+      <td>{{  dato.marcaModelo  }}</td>
+      <td>{{  dato.placa  }}</td>
+      <td>
+        <button class="btn btn-info mr-1 mx-2" data-toggle="modal" data-target="#modalTaller"
+                (click)="editarRegistro(dato, i)">
+          <i class="fa fa-pen "></i>
+        </button>
+        <button class="btn btn-danger"
+                (click)="borrarRegistro(dato, i)">
+          <i class="fa fa-trash "></i>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div id="sync-wrapper">
+  <div id="sync-success"> </div>
+  <div id="sync-error"> </div>
+</div>
+<app-modal [automovilSeleccionado]="automovilSeleccionado" [index]="index"></app-modal>

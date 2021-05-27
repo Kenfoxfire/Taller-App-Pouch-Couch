@@ -1,0 +1,46 @@
+
+    <div id="wrapper" class="container mt-5" style="height: auto;">
+
+      <div class="row container">
+          <div class="col offset-xl-0" style="height: auto;">
+            <h3><label>Taller - App</label></h3>
+              <div class="card shadow mb-4" style="margin-bottom: 18px;height: 489px;margin-top: 13px;width: 953px;margin-left: 8px;">
+                  <div class="card-body" style="height: 358px;width: 944px;">
+                      <div class="text-center small mt-4"><img src="assets/img/car.png" style="margin: 0px;width: 305px;height: 367px;margin-right: 4px;"></div>
+                  </div>
+              </div>
+              <div class="card shadow mb-4" style="margin-bottom: 27px;height: 271px;margin-top: 11px;width: 953px;">
+                  <div class="card-body" style="height: 319px;width: 898px;">
+                      <div class="form-group" style="height: 233px;width: 770px;">
+
+
+                          <form [formGroup]="formulariLogin" (ngSubmit)="guardar()">
+
+                            <div class="form-group" >
+                            <label>Codigo de cliente</label>
+                          <input class="form-control"
+                                 style="width: 148px;"
+                                 type="number"
+                                 formControlName="codigo"
+                                 placeholder="Codigo"
+                                 [class.is-invalid]="codigoNoValido">
+                          <small *ngIf="codigoNoValido" class="text-danger">
+                            Por favor ingrese un codigo valido
+                          </small>
+                             </div>
+
+                        <div></div>
+                      <button class="btn btn-success btn-circle ml-1" role="button"
+                         style="height: 44px;padding: 29px;margin-left: 8px;margin-top: 20px;margin-right: 1px;padding-left: 30px;" type="submit">
+                         <i class="fas fa-check text-white"></i>
+                      </button>
+                        <div></div>
+
+                      </form>
+                      </div>
+                      <div class="text-center small mt-4"></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>

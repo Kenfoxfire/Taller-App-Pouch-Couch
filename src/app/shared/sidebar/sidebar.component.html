@@ -1,0 +1,29 @@
+<nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0" style="background-color: rgb(208,43,33);color: rgb(222,31,65);filter: brightness(96%) hue-rotate(124deg);">
+  <div class="container-fluid d-flex flex-column p-0">
+      <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
+          <div class="sidebar-brand-icon rotate-n-15"><i class="fas fa-bus-alt"></i></div>
+          <div class="sidebar-brand-text mx-3"><span>APP Taller</span></div>
+      </a>
+      <hr class="sidebar-divider my-0">
+      <ul class="nav navbar-nav text-light" id="accordionSidebar">
+        <li class="nav-item" >
+          <a class="nav-link" [routerLink]="[ '/login' ]" routerLinkActive="active">
+            <i class="fas fa-user-cog" style="font-size: 40px;">
+        </i><span>Login</span></a>
+          <li class="nav-item" >
+            <a class="nav-link" [routerLink]="[ '/control' ]" routerLinkActive="active">
+            <i class="fas fa-tachometer-alt" style="font-size: 40px;">
+            </i><span>Control de ingreso</span>
+          </a>
+        </li>
+          <li class="nav-item" >
+            <a class="nav-link" [routerLink]="[ '/perfil' ]" routerLinkActive="active">
+            <i class="fas fa-user" style="font-size: 52px;">
+        </i>&nbsp;Perfil</a>
+            <a class="nav-link" [routerLink]="[ '/taller' ]" routerLinkActive="active">
+              <i class="fas fa-car-side" style="font-size: 35px;">
+              </i>&nbsp;Taller</a></li>
+      </ul>
+      <div class="text-center d-none d-md-inline"></div>
+  </div>
+</nav>

@@ -1,0 +1,79 @@
+<!-- Button trigger modal -->
+<!-- Modal -->
+<div class="modal fade"
+     id="modalTaller"
+     tabindex="-1"
+     aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Editar registro</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" ><i class="far fa-times-circle"></i></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formularioAutomovil" (ngSubmit)="guardar()">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label>Dueño</label>
+              <input type="text"
+              id="dueno"
+              name="dueno"
+              class="form-control"
+              formControlName="dueno"
+              placeholder="dueno"
+              [class.is-invalid]="duenoNoValido">
+              <small *ngIf="duenoNoValido" class="text-danger">
+                Por favor ingrese un nombre valido
+              </small>
+            </div>
+            <div class="form-group col-md-6">
+              <label>Marca y Modelo</label>
+              <input type="text"
+              id="modelo"
+              name="modelo"
+              class="form-control"
+              formControlName="marcaModelo"
+              placeholder="marcaModelo"
+              [class.is-invalid]="marcaModeloNoValido">
+              <small *ngIf="marcaModeloNoValido" class="text-danger">
+                Por favor ingrese un nombre valido
+              </small>
+            </div>
+            <div class="form-group col-md-6">
+              <label>Placa</label>
+              <input type="text"
+              id="placa"
+              name="placa"
+              class="form-control"
+              formControlName="placa"
+              placeholder="placa"
+              [class.is-invalid]="placaNoValido">
+              <small *ngIf="placaNoValido" class="text-danger">
+                Por favor ingrese un nombre valido
+              </small>
+            </div>
+            <div class="form-group col-md-6">
+              <label>_rev</label>
+              <input type="text"
+              id="_rev"
+              name="_rev"
+              class="form-control"
+              formControlName="_rev"
+              disabled
+              placeholder="_rev">
+            </div>
+          </div>
+          <button class="btn btn-primary float-right" data-toggle="collapse" data-target="#modalTaller"
+                  type="submit">
+                  guardar
+          </button>
+          <!-- <button class="btn btn-primary float-right" data-toggle="collapse" data-target="#modalTaller"
+                  type="submit">
+                  guardar
+          </button> -->
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

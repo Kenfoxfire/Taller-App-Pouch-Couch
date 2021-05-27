@@ -1,0 +1,102 @@
+
+
+<div id="content" >
+  <nav class="navbar navbar-dark navbar-expand bg-dark shadow mb-4 topbar static-top ">
+  </nav>
+          <div class="container-fluid mt-5 animate__animated animate__jackInTheBox" >
+              <h3 class="text-dark mb-4" style="padding-bottom: 62px;">Perfil</h3>
+              <div class="row mb-3">
+                  <div class="col-lg-4">
+                      <div class="card mb-4">
+                          <div class="card-body text-center shadow"><img class="rounded-circle" src="../../../assets/img/avatars/avatar.gif" width="250" height="225">
+                              <div class="mb-3"><button class="btn btn-primary btn-sm" type="button" style="background-color: #e5053a;">Cambiar foto</button></div>
+                          </div>
+                      </div>
+                      <div class="card shadow mb-4"></div>
+                  </div>
+                  <div class="col-lg-8">
+                      <div class="row">
+                          <div class="col">
+                              <div class="card shadow mb-3">
+                                  <div class="card-header py-3">
+                                      <p class="text-primary m-0 font-weight-bold">Datos del Usuario</p>
+                                  </div>
+                                  <div class="card-body">
+                                      <form [formGroup]="formularioPerfil" (ngSubmit)="guardar()">
+                                          <div class="form-row">
+                                              <div class="col">
+                                                  <div class="form-group">
+                                                    <label for="username">
+                                                      <strong>Nombre</strong>
+                                                      <br>
+                                                    </label>
+                                                    <input class="form-control"
+                                                           type="text"
+                                                           placeholder="Nombre"
+                                                           formControlName="nombre"
+                                                           [class.is-invalid]="nombreNoValido">
+                                                           <small *ngIf="nombreNoValido" class="text-danger">
+                                                            Por favor ingrese un nombre valido
+                                                          </small>
+                                                  </div>
+                                              </div>
+                                              <div class="col">
+                                                  <div class="form-group">
+                                                    <label for="last_name">
+                                                      <strong>Número</strong>
+                                                      <br>
+                                                    </label>
+                                                    <input  class="form-control"
+                                                            type="tel"
+                                                            placeholder="Número"
+                                                            formControlName="numero"
+                                                            [class.is-invalid]="numeroNoValido">
+                                                            <small *ngIf="numeroNoValido" class="text-danger">
+                                                              Por favor ingrese un numero valido
+                                                            </small>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="form-row">
+                                              <div class="col">
+                                                  <div class="form-group">
+                                                    <label for="email">
+                                                      <strong>Correo electronico</strong>
+                                                      <br>
+                                                    </label>
+                                                    <input class="form-control"
+                                                           type="email"
+                                                           placeholder="correo@ejemplo.com"
+                                                           formControlName="correo"
+                                                           [class.is-invalid]="correoNoValido">
+                                                           <small *ngIf="correoNoValido" class="text-danger">
+                                                            Por favor ingrese un Correo electronico valido
+                                                          </small>
+                                                    </div>
+                                              </div>
+                                          </div>
+                                          <div class="form-group" *ngIf="!existePerfil">
+                                            <button class="btn btn-primary btn-sm"
+                                                    type="submit"
+                                                    style="background-color:
+                                                    #e5053a;">Guardar</button>
+                                          </div>
+                                          <div class="form-group" *ngIf="existePerfil">
+                                            <button class="btn btn-primary btn-sm"
+                                                    type="submit"
+                                                    style="background-color:
+                                                    #44e505;">Editar</button>
+                                            </div>
+                                      </form>
+                                  </div>
+                              </div>
+                              <div class="card shadow"></div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="card shadow mb-5"></div>
+
+
+</div>
+
